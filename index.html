@@ -679,7 +679,12 @@
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        keyboard: {
+          40: "next", // keycode 116 → slide successiva
+          38: "prev", // keycode 111 → slide precedente
+        },
       });
+      document.addEventListener("keydown", (e) => console.log(e.keyCode));
     </script>
   </body>
 </html>
